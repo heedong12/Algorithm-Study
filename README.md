@@ -22,6 +22,23 @@
   </tr>
 </table>
 
+<br />
+
+## 🎯 **Commit 규칙**
+파일 구조
+```
+{주차}/{문제}/{GitHub 아이디}.{파일명}
+ex) Week1/BOJ_2225(합분해)/rvbear.java
+```
+
+Commit Message
+```
+[BOJ] / {문제난이도} / {해결시간} / {이름}
+ex) [BOJ] / G5 / 160ms / 김경민
+```
+
+<br />
+
 ## 🧑🏻‍💻 **스터디 멤버** 👩🏻‍💻
 
 <table>
