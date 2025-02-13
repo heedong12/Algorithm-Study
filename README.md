@@ -14,9 +14,9 @@
   <tr>
     <td>언어</td>
     <td>
-    <img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=openjdk&logoColor=white">
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
+    <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=OpenJDK&logoColor=white">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white">
     </td>
 
   </tr>
@@ -45,24 +45,24 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=openjdk&logoColor=white"> </br>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
+      <img src="https://img.shields.io/badge/Java-007396.svg?&style=flat&logo=openjdk&logoColor=white"> </br>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white">
       </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=fflat&logo=JavaScript&logoColor=white">
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white">
     </td>
-    <td align="center"><img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=openjdk&logoColor=white"> </td>
+    <td align="center"><img src="https://img.shields.io/badge/Java-007396.svg?&style=flat&logo=openjdk&logoColor=white"> </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
-    </td>
-    <td align="center">
-     <img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=openjdk&logoColor=white"></br>
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white">
     </td>
     <td align="center">
-     <img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=openjdk&logoColor=white"></br>
+     <img src="https://img.shields.io/badge/Java-007396.svg?&style=flat&logo=openjdk&logoColor=white"></br>
+    </td>
+    <td align="center">
+     <img src="https://img.shields.io/badge/Java-007396.svg?&style=flat&logo=openjdk&logoColor=white"></br>
     </td>
   </tr>
 </table>
