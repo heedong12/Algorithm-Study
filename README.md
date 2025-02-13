@@ -1,5 +1,7 @@
 # 💻 Algorithm-Study
 
+## 📌 한국경제신문 X Toss Bank - 풀스택 과정 알고리즘 스터디
+
 <table>
   <tr>
     <td><b>🗓️ 진행 기간</b></td>
