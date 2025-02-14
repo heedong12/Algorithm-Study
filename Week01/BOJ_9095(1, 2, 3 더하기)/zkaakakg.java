@@ -11,15 +11,15 @@ public class Main {
 			int[] dp = new int[n+1];
 			
 			if (n == 1) {
-                System.out.println(1);
-                continue;
-            } else if (n == 2) {
-                System.out.println(2);
-                continue;
-            } else if (n == 3) {
-                System.out.println(4);
-                continue;
-            }
+                		System.out.println(1);
+                		continue;
+            		} else if (n == 2) {
+                		System.out.println(2);
+                		continue;
+            		} else if (n == 3) {
+                  		System.out.println(4);
+                		continue;
+            		}
 			
 			dp[1] = 1;
 			dp[2] = 2;
