@@ -9,8 +9,8 @@ public class Main {
 		br.close();
 		
 		if (n == 0) {
-            System.out.println(0);
-            return;
+            		System.out.println(0);
+            		return;
 		}
 		
 		long[] arr = new long[n+1];
