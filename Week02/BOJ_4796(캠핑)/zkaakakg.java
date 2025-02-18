@@ -18,7 +18,6 @@ public class Main {
 			cnt++;
 			sb.append("Case ").append(cnt).append(": ").append(result).append("\n");
 		}
-		
 		System.out.print(sb.toString());
 	}
 }
