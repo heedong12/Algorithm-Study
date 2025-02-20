@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 public class Main {
 
 	public static void main(String[] args) throws Exception{
@@ -8,12 +7,12 @@ public class Main {
 		int t = Integer.parseInt(br.readLine());
 		for(int tc = 0; tc < t; tc ++) {
 			int n = Integer.parseInt(br.readLine());
+			String[] input = br.readLine().split(" ");
 			long result = 0;
 			int[] arr = new int[n];
 			
-			StringTokenizer st = new StringTokenizer(br.readLine());
 			for(int i = 0; i < n; i++) {
-				arr[i] = Integer.parseInt(st.nextToken());
+				arr[i] = Integer.parseInt(input[i]);
 			}
 			
 			int max = 0;
@@ -23,8 +22,12 @@ public class Main {
 				}else {
 					result += (max - arr[i]);
 				}
+				
 			}
+			
 			System.out.println(result);
+			
 		}
 	}
+
 }
