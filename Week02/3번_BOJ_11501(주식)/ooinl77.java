@@ -19,7 +19,7 @@ public class Main {
             }
 
             int maxValue = 0; // 최댓값
-            int profit = 0; // 총 이익
+            long profit = 0; // 총 이익
 
             // 뒤에서부터 최댓값 갱신하며 비교
             for (int i = day - 1; i >= 0; i--) {
