@@ -7,10 +7,9 @@ public class Main {
         int N = Integer.parseInt(br.readLine()); // 회의 수
         int[][] time = new int[N][2]; // 회의 시간 배열
 
-        // 입력 받기
         for (int i = 0; i < N; i++) {
             String[] timeInput = br.readLine().split(" ");
-            time[i][0] = Integer.parseInt(timeInput[0]); // 시작 시간
+            time[i][0] = Integer.parseInt(timeInput[0]); 
             time[i][1] = Integer.parseInt(timeInput[1]); // 종료 시간
         }
 
@@ -22,15 +21,14 @@ public class Main {
             }
         });
 
-        int endTime = 0; // 현재 회의가 끝나는 시간
-        int result = 0;  // 최대 회의 수
+        int endTime = 0; // 회의 종료 시간
+        int result = 0;  // 최대 회의 갯수
 
-        // 그리디 알고리즘 적용
         for (int i = 0; i < N; i++) {
             // 현재 회의의 시작 시간이 마지막으로 선택된 회의의 종료 시간 이후라면 선택 가능
             if (time[i][0] >= endTime) {
                 result++;
-                endTime = time[i][1]; // 현재 회의의 종료 시간을 갱신
+                endTime = time[i][1]; // 종료 시간 갱신
             }
         }
 
