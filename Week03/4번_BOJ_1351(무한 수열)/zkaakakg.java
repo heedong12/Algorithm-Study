@@ -20,10 +20,9 @@ public class Main {
 	
 	static long solution(long n) {
 		if (!map.containsKey(n)) {
-            map.put(n, n == 0 ? 1 : solution(n / p) + solution(n / q));
-        }
-        return map.get(n);
-		
+			map.put(n, n == 0 ? 1 : solution(n / p) + solution(n / q));
+		}
+		return map.get(n);
 	}
 
 }
