@@ -43,11 +43,11 @@ public class Main {
         }
         
         // 모든 도시 탐색
-        for (int ㅑ = 0; ㅑ < n; ㅑ++) {
-            if (!visited[ㅑ] && w[cur][ㅑ] != 0) {
-                visited[ㅑ] = true;
-                back(start, ㅑ, cost + w[cur][ㅑ], count + 1);
-                visited[ㅑ] = false; // 백트래킹
+        for (int i = 0; i < n; i++) {
+            if (!visited[i] && w[cur][i] != 0) {
+                visited[i] = true;
+                back(start, i, cost + w[cur][i], count + 1);
+                visited[i] = false; // 백트래킹
             }
         }
         
