@@ -1,48 +1,72 @@
 import java.io.*;
-
 import java.util.*;
 
 public class Main {
 
-    static int N;  // 도시 수
-    static int[][] W; //비용
-    static boolean[] visited; // 기록
-    static int minCost = Integer.MAX_VALUE; //최소비용
-
+    static int N;  // 단어 수
+    static int K; // 글자 수
+    static String S = "antic"; // 고정단어
+    static String[] word; // 단어모음
+    static boolean[] used = new boolean[26]; // 알파벳 기록?
+    //    static boolean[] history; // 단어 사용?
+    static int maxCount = 0; // 최대 단어 개수
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
-        W = new int[N][N];
-        visited = new boolean[N];
-        for (int i=0; i<N; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            for (int j=0; j<N; j++) {
-                W[i][j] = Integer.parseInt(st.nextToken());
-            }
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        K = Integer.parseInt(st.nextToken());
+
+        // 고정 글자 수 보다 작으면 자격 미달.
+        if (K < 5) {
+            System.out.println(0);
+            return;
+        }
+        // 고정 글자 수 만큼 빼기, 배열 갱신
+        K -= 5;
+        used['a' - 'a'] = true;
+        used['n' - 'a'] = true;
+        used['t' - 'a'] = true;
+        used['i' - 'a'] = true;
+        used['c' - 'a'] = true;
+
+        word = new String[N];
+//        history = new boolean[N];
+
+        for (int i = 0; i < N; i++) {
+            word[i] = br.readLine();
         }
 
-        visited[0] = true;
-        dfs(0, 0, 0, 1);
-        System.out.println(minCost);
+        dfs(0, K);
+
+        System.out.println(maxCount);
+
     }
 
-    //시작, 지금위치, 누적비용, 방문도시수
-    public static void dfs(int start, int now, int cost, int count) {
-
-        // 방문도시수가 도시수랑 같으면 끝?
-        if (count == N) {
-            if (W[now][start] > 0) {  // 집에 갈 수 있다.
-                cost += W[now][start];
-                minCost = Math.min(minCost, cost);  // 여행 경비 갱신
+    public static void dfs(int start, int K) {
+        //알파벳 조합 완성되면 단어검사
+        if (K == 0) {
+            int count = 0;
+            //알파벳 배열에 없는 문자 검거
+            for (String w : word) {
+                boolean learn = true; // 검거 flag
+                for (char c : w.toCharArray()) {
+                    if (!used[c - 'a']) {
+                        learn = false;
+                        break;
+                    }
+                }
+                if (learn) count++;
             }
+            maxCount = Math.max(maxCount, count);
             return;
         }
 
-        for (int i = 0; i < N; i++) {
-            if (W[now][i] > 0 && !visited[i]) { // 길이 있고 간 적 없음
-                visited[i] = true;  // 왔다감
-                dfs(start, i, cost + W[now][i], count + 1);
-                visited[i] = false;  // 취소
+        // 알파벳 조합
+        for (int i = start; i < 26; i++) {
+            if (!used[i]) {
+                used[i] = true;
+                dfs(i + 1, K - 1);
+                used[i] = false;
             }
         }
     }
