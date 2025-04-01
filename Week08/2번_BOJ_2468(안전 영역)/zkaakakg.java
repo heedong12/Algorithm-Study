@@ -23,7 +23,7 @@ public class Main {
             }
         }
         int result = 1;
-        for (int i = min; i <= max; i++) {
+        for (int i = min; i < max; i++) {
             visited = new boolean[n][n];
             int cnt = 0;
 
