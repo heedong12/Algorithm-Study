@@ -18,13 +18,6 @@ class Fireball:
 
     def getOtherDirection(self):
         return self.otherDirection  # 방향 기록 리스트 반환
-
-    def reset(self):
-        self.mass = 0
-        self.velocity = 0
-        self.direction = 0
-        self.otherDirection = []  # 파이어볼 초기화
-
 # 입력 받음 (격자 크기, 파이어볼 개수, 명령 반복 횟수)
 n , m , k = map(int, input().split())
 
@@ -68,9 +61,6 @@ for repeat in range(k):
     Map = newMap  # 이동 결과를 원본 맵으로 복사
     F = newF  # 파이어볼 정보도 복사
 
-    if repeat == k - 1:  # 마지막 반복이면 더 이상 합치기 작업 안 함
-        break
-
     # 2개 이상인 위치에서 파이어볼 쪼개기
     for i in range(n):
         for j in range(n):
@@ -80,7 +70,6 @@ for repeat in range(k):
 
                 if M // 5 == 0:  # 나눠진 질량이 0이면 소멸
                     Map[i][j] = 0
-                    F[i][j].reset()
                     continue
 
                 temp = F[i][j].getOtherDirection()  # 방향 배열 조회
@@ -100,8 +89,6 @@ for repeat in range(k):
                 M, s, d = F[i][j].__getstate__()
                 f = Fireball(M, s, d)
                 command.append((i, j, f))
-
-            F[i][j].reset()  # 해당 칸 정보 초기화
 
 # 최종 질량 합산
 result = 0
