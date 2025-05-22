@@ -3,6 +3,7 @@ package 백준;
 import java.io.*;
 public class _1012_2 {
 
+    static int MAX = 50 + 2;
     static int M, N, K;
     static boolean[][] arr;
     static int answer;
@@ -31,7 +32,7 @@ public class _1012_2 {
             N = Integer.parseInt(input[1]);
             K = Integer.parseInt(input[2]);
 
-            arr = new boolean[N+2][M+2];
+            arr = new boolean[MAX][MAX];
 
             for(int i=0; i<K;i++) {
                 input = br.readLine().split(" ");
